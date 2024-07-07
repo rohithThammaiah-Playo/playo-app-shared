@@ -5,6 +5,9 @@ kotlinx-serialization-json = "1.6.0"
 ktor = "2.3.11"
 gson = "2.10.1"
 
+kmmBridge = "0.5.1"
+skie = "0.6.1"
+
 [libraries]
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization-json" }
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
@@ -17,3 +20,5 @@ gson = { module = "com.google.code.gson:gson", version.ref = "gson"}
 [plugins]
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+skie = { id = "co.touchlab.skie", version.ref = "skie" }
+kmmbridge = { id = "co.touchlab.kmmbridge", version.ref = "kmmBridge" }
