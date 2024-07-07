@@ -5,8 +5,8 @@ kotlinx-serialization-json = "1.6.0"
 ktor = "2.3.11"
 gson = "2.10.1"
 
-kmmBridge = "0.5.1"
-skie = "0.6.4"
+kmmBridge = "0.5.5"
+skie = "0.8.2"
 
 [libraries]
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization-json" }
