@@ -1,9 +1,13 @@
 package com.techmash.playo.shared.trainer.models.responses
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class TrainerSearchDTO(
     val trainers: List<Trainer>,
 )
 
+@Serializable
 data class Trainer(
     val id: String?,
     val address: String,

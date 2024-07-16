@@ -1,9 +1,13 @@
 package com.techmash.playo.shared.trainer.models.responses
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class TrainerDetailsDTO(
     val trainerDetails: TrainerDetails,
 )
 
+@Serializable
 data class TrainerDetails(
     val bio: String?,
     val about: String?,
@@ -42,18 +46,21 @@ data class TrainerDetails(
     val academyDetails: AcademyDetails?,
 )
 
+@Serializable
 data class AcademyDetails(
     val academyName: String?,
     val coaches: List<AcademyDetailCoaches>?,
     val logo: String?,
 )
 
+@Serializable
 data class ListingAcademyDetails(
     val academyName: String?,
     val coaches: List<Coaches>?,
     val logo: String?,
 )
 
+@Serializable
 data class Coaches(
     val certifications: List<Certifications>,
     val coachDescription: String,
@@ -64,6 +71,7 @@ data class Coaches(
     val services: List<String>,
 )
 
+@Serializable
 data class AcademyDetailCoaches(
     val certifications: List<Certifications>,
     val coachDescription: String,
@@ -74,6 +82,7 @@ data class AcademyDetailCoaches(
     val services: List<Service>?,
 )
 
+@Serializable
 data class UserQuery(
     val isAnswered: Boolean?,
     val queryId: String?,
@@ -84,6 +93,7 @@ data class UserQuery(
     val isReadByUser: Boolean?,
 )
 
+@Serializable
 data class Service(
     val categoryType: String?,
     val serviceId: String?,
@@ -91,11 +101,13 @@ data class Service(
     val serviceName: String?,
 )
 
+@Serializable
 data class Location(
     val coordinates: List<Double>?,
     val type: String?,
 )
 
+@Serializable
 data class Certifications(
     val certificateImage: String?,
     val description: String?,

@@ -1,10 +1,14 @@
 package com.techmash.playo.shared.trainer.models.responses
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class UserQueryDTO(
     val nextPage: Int,
     val userQueries: List<UserQueryList>,
 )
 
+@Serializable
 data class UserQueryList(
     val queries: Queries,
     val trainerImage: String?,
@@ -15,6 +19,7 @@ data class UserQueryList(
     val isAcademy: Boolean?,
 )
 
+@Serializable
 data class Queries(
     val answerTime: String?,
     val isAnswered: Boolean,

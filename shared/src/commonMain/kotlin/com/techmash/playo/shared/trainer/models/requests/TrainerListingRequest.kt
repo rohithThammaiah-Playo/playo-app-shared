@@ -6,7 +6,9 @@ import com.techmash.playo.shared.trainer.models.responses.TrainerSearchDTO
 import com.techmash.playo.shared.trainer.models.responses.TrainerDetailsDTO
 import com.techmash.playo.shared.trainer.models.responses.TrainerHomeDTO
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class TrainerListingRequest(
     @SerialName("userId")
     val userId: String,
@@ -24,6 +26,7 @@ data class TrainerListingRequest(
     val page: Int,
 )
 
+@Serializable
 data class TrainerListingResponse(
     val data: TrainerListingDTO,
     override val message: String?,
@@ -32,10 +35,13 @@ data class TrainerListingResponse(
     override val nextPage: Int? = null,
 ) : PlayoResponse
 
+@Serializable
 data class TrainerListingDTO(
     val nextPage: Int,
     val trainerList: List<Trainer>,
 )
+
+@Serializable
 data class TrainerDetailResponse(
     val data: TrainerDetailsDTO,
     override val message: String?,
@@ -44,6 +50,7 @@ data class TrainerDetailResponse(
     override val nextPage: Int?,
 ) : PlayoResponse
 
+@Serializable
 data class TrainerSearchResponse(
     val data: TrainerSearchDTO,
     override val message: String?,
@@ -52,6 +59,7 @@ data class TrainerSearchResponse(
     override val nextPage: Int?,
 ) : PlayoResponse
 
+@Serializable
 data class TrainerHomeDataResponse(
     val data: TrainerHomeDTO,
     override val message: String?,

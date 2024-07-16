@@ -1,7 +1,9 @@
 package com.techmash.playo.shared.trainer.models.responses
 
 import com.techmash.playo.shared.network.PlayoResponse
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class TrainerRatingsResponse(
     val data: TrainerRatingDTO,
     override val message: String?,
@@ -10,11 +12,13 @@ data class TrainerRatingsResponse(
     override val nextPage: Int?,
 ) : PlayoResponse
 
+@Serializable
 data class TrainerRatingDTO(
     val rating: Rating?,
     val trainerInfo: TrainerInfo?,
 )
 
+@Serializable
 data class Rating(
     val __v: Int?,
     val _id: String?,
@@ -29,6 +33,7 @@ data class Rating(
     val userName: String?,
 )
 
+@Serializable
 data class TrainerInfo(
     val trainerId: String?,
     val trainerImage: String?,
@@ -37,6 +42,7 @@ data class TrainerInfo(
     val academyDetails: AcademyInfo?,
 )
 
+@Serializable
 data class AcademyInfo(
     val academyName: String?,
     val logo: String?,
