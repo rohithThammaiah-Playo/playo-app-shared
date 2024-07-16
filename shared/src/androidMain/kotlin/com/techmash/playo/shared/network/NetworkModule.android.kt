@@ -22,5 +22,6 @@ actual val httpClient: HttpClient =  HttpClient() {
         // add base url for all request
         url("https://staging.playo.io/")
         header("Authorization", "5534898698eb3426d00168b6ed447d23d000026552ed6200")
+        header("Content-Type", "application/json")
     }
 }
