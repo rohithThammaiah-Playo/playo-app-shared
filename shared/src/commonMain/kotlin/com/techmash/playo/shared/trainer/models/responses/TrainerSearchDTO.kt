@@ -9,7 +9,6 @@ data class TrainerSearchDTO(
 
 @Serializable
 data class Trainer(
-    val id: String?,
     val address: String,
     val avgRating: Float,
     val fName: String,
